@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:weightSum="10"
+  tools:context=".Player">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="7"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+      android:layout_width="250dp"
+      android:layout_height="250dp"
+      android:background="@drawable/back" />
+
+    <TextView
+      android:id="@+id/label"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="40dp"
+      android:ellipsize="marquee"
+      android:marqueeRepeatLimit="marquee_forever"
+
+      android:scrollHorizontally="true"
+      android:singleLine="true"
+      android:text="Song Name"
+      android:textAlignment="center"
+      android:textColor="@color/colorPrimary"
+      android:textSize="22sp" />
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="3">
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:padding="5dp">
+
+      <SeekBar
+        android:id="@+id/seek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp" />
+
+      <Button
+        android:id="@+id/pause"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/pause" />
+
+      <Button
+        android:id="@+id/previous"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/previous" />
+
+      <Button
+        android:id="@+id/next"
+        android:layout_width="113dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="340dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/next" />
+
+    </RelativeLayout>
+  </LinearLayout>
+</LinearLayout>
